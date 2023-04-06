@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "1bb29f94-a602-4a3d-802e-9c02268c97e7",
+		"name": "teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22852554"
+	},
+	"item": [
+		{
+			"name": "cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"\",\r\n    \"cidade\": \"Rio de Janeiro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5\",\r\n    \"nome\": \"Gabriel\",\r\n    \"cidade\": \"Amazonas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar por codigo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contar quantos registros tem na tabela",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/contador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"contador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por nome decrescente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/ordenarNomes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"ordenarNomes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/ordenarNomes/João",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"ordenarNomes",
+						"João"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por conter alguma letra",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/nomeContem/w",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"nomeContem",
+						"w"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar com nome iniciando por determinada letra",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/iniciaCom/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"iniciaCom",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar com nome terminando com determinada letra",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/terminaCom/o",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"terminaCom",
+						"o"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/usuarios/api/pesquisa/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"usuarios",
+						"api",
+						"pesquisa",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
